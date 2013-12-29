@@ -1,5 +1,5 @@
 # Split your main method into several small ones
-# Each sub-method should accomplish a single task (adding value of course)
+# Each sub-method should accomplish a single task
 
 def run_game
   # your code goes here
