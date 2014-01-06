@@ -1,1 +1,1 @@
-puts "I am a github newbie"
+puts "I am a github champ"
