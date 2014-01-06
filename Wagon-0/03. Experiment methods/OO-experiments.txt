@@ -1,2 +1,78 @@
-// Copy some experiments you made on ruby String and Fixnum objects below !
-// You choose pick 3 methods for String and 3 methods for Fixnum
+irb(main):001:0> 3+7
+=> 10
+irb(main):002:0> 3.+(7)
+=> 10
+irb(main):003:0> 3.send("+",7)
+=> 10
+irb(main):004:0> "Waou ".*(3)
+=> "Waou Waou Waou "
+irb(main):005:0> "A string object".class
+=> String
+irb(main):006:0> 19.class
+=> Fixnum
+irb(main):007:0> "A string object".upcase
+=> "A STRING OBJECT"
+irb(main):008:0> "A string object"methods
+SyntaxError: (irb):8: syntax error, unexpected tIDENTIFIER, expecting end-of-input
+	from /usr/bin/irb:12:in `<main>'
+irb(main):009:0> "A string object".methods
+=> [:<=>, :==, :===, :eql?, :hash, :casecmp, :+, :*, :%, :[], :[]=, :insert, :length, :size, :bytesize, :empty?, :=~, :match, :succ, :succ!, :next, :next!, :upto, :index, :rindex, :replace, :clear, :chr, :getbyte, :setbyte, :byteslice, :to_i, :to_f, :to_s, :to_str, :inspect, :dump, :upcase, :downcase, :capitalize, :swapcase, :upcase!, :downcase!, :capitalize!, :swapcase!, :hex, :oct, :split, :lines, :bytes, :chars, :codepoints, :reverse, :reverse!, :concat, :<<, :prepend, :crypt, :intern, :to_sym, :ord, :include?, :start_with?, :end_with?, :scan, :ljust, :rjust, :center, :sub, :gsub, :chop, :chomp, :strip, :lstrip, :rstrip, :sub!, :gsub!, :chop!, :chomp!, :strip!, :lstrip!, :rstrip!, :tr, :tr_s, :delete, :squeeze, :count, :tr!, :tr_s!, :delete!, :squeeze!, :each_line, :each_byte, :each_char, :each_codepoint, :sum, :slice, :slice!, :partition, :rpartition, :encoding, :force_encoding, :b, :valid_encoding?, :ascii_only?, :unpack, :encode, :encode!, :to_r, :to_c, :>, :>=, :<, :<=, :between?, :nil?, :!~, :class, :singleton_class, :clone, :dup, :taint, :tainted?, :untaint, :untrust, :untrusted?, :trust, :freeze, :frozen?, :methods, :singleton_methods, :protected_methods, :private_methods, :public_methods, :instance_variables, :instance_variable_get, :instance_variable_set, :instance_variable_defined?, :remove_instance_variable, :instance_of?, :kind_of?, :is_a?, :tap, :send, :public_send, :respond_to?, :extend, :display, :method, :public_method, :define_singleton_method, :object_id, :to_enum, :enum_for, :equal?, :!, :!=, :instance_eval, :instance_exec, :__send__, :__id__]
+irb(main):010:0> String.instance_methods
+=> [:<=>, :==, :===, :eql?, :hash, :casecmp, :+, :*, :%, :[], :[]=, :insert, :length, :size, :bytesize, :empty?, :=~, :match, :succ, :succ!, :next, :next!, :upto, :index, :rindex, :replace, :clear, :chr, :getbyte, :setbyte, :byteslice, :to_i, :to_f, :to_s, :to_str, :inspect, :dump, :upcase, :downcase, :capitalize, :swapcase, :upcase!, :downcase!, :capitalize!, :swapcase!, :hex, :oct, :split, :lines, :bytes, :chars, :codepoints, :reverse, :reverse!, :concat, :<<, :prepend, :crypt, :intern, :to_sym, :ord, :include?, :start_with?, :end_with?, :scan, :ljust, :rjust, :center, :sub, :gsub, :chop, :chomp, :strip, :lstrip, :rstrip, :sub!, :gsub!, :chop!, :chomp!, :strip!, :lstrip!, :rstrip!, :tr, :tr_s, :delete, :squeeze, :count, :tr!, :tr_s!, :delete!, :squeeze!, :each_line, :each_byte, :each_char, :each_codepoint, :sum, :slice, :slice!, :partition, :rpartition, :encoding, :force_encoding, :b, :valid_encoding?, :ascii_only?, :unpack, :encode, :encode!, :to_r, :to_c, :>, :>=, :<, :<=, :between?, :nil?, :!~, :class, :singleton_class, :clone, :dup, :taint, :tainted?, :untaint, :untrust, :untrusted?, :trust, :freeze, :frozen?, :methods, :singleton_methods, :protected_methods, :private_methods, :public_methods, :instance_variables, :instance_variable_get, :instance_variable_set, :instance_variable_defined?, :remove_instance_variable, :instance_of?, :kind_of?, :is_a?, :tap, :send, :public_send, :respond_to?, :extend, :display, :method, :public_method, :define_singleton_method, :object_id, :to_enum, :enum_for, :equal?, :!, :!=, :instance_eval, :instance_exec, :__send__, :__id__]
+irb(main):011:0> String.methods
+=> [:try_convert, :allocate, :new, :superclass, :freeze, :===, :==, :<=>, :<, :<=, :>, :>=, :to_s, :inspect, :included_modules, :include?, :name, :ancestors, :instance_methods, :public_instance_methods, :protected_instance_methods, :private_instance_methods, :constants, :const_get, :const_set, :const_defined?, :const_missing, :class_variables, :remove_class_variable, :class_variable_get, :class_variable_set, :class_variable_defined?, :public_constant, :private_constant, :module_exec, :class_exec, :module_eval, :class_eval, :method_defined?, :public_method_defined?, :private_method_defined?, :protected_method_defined?, :public_class_method, :private_class_method, :autoload, :autoload?, :instance_method, :public_instance_method, :nil?, :=~, :!~, :eql?, :hash, :class, :singleton_class, :clone, :dup, :taint, :tainted?, :untaint, :untrust, :untrusted?, :trust, :frozen?, :methods, :singleton_methods, :protected_methods, :private_methods, :public_methods, :instance_variables, :instance_variable_get, :instance_variable_set, :instance_variable_defined?, :remove_instance_variable, :instance_of?, :kind_of?, :is_a?, :tap, :send, :public_send, :respond_to?, :extend, :display, :method, :public_method, :define_singleton_method, :object_id, :to_enum, :enum_for, :equal?, :!, :!=, :instance_eval, :instance_exec, :__send__, :__id__]
+irb(main):012:0> "A string object".methods class
+SyntaxError: (irb):12: syntax error, unexpected end-of-input
+	from /usr/bin/irb:12:in `<main>'
+irb(main):013:0> "A string object".methods.class
+=> Array
+irb(main):014:0> "A string object".class.class
+=> Class
+irb(main):015:0> string.methods
+NameError: undefined local variable or method `string' for main:Object
+	from (irb):15
+	from /usr/bin/irb:12:in `<main>'
+irb(main):016:0> String.methods
+=> [:try_convert, :allocate, :new, :superclass, :freeze, :===, :==, :<=>, :<, :<=, :>, :>=, :to_s, :inspect, :included_modules, :include?, :name, :ancestors, :instance_methods, :public_instance_methods, :protected_instance_methods, :private_instance_methods, :constants, :const_get, :const_set, :const_defined?, :const_missing, :class_variables, :remove_class_variable, :class_variable_get, :class_variable_set, :class_variable_defined?, :public_constant, :private_constant, :module_exec, :class_exec, :module_eval, :class_eval, :method_defined?, :public_method_defined?, :private_method_defined?, :protected_method_defined?, :public_class_method, :private_class_method, :autoload, :autoload?, :instance_method, :public_instance_method, :nil?, :=~, :!~, :eql?, :hash, :class, :singleton_class, :clone, :dup, :taint, :tainted?, :untaint, :untrust, :untrusted?, :trust, :frozen?, :methods, :singleton_methods, :protected_methods, :private_methods, :public_methods, :instance_variables, :instance_variable_get, :instance_variable_set, :instance_variable_defined?, :remove_instance_variable, :instance_of?, :kind_of?, :is_a?, :tap, :send, :public_send, :respond_to?, :extend, :display, :method, :public_method, :define_singleton_method, :object_id, :to_enum, :enum_for, :equal?, :!, :!=, :instance_eval, :instance_exec, :__send__, :__id__]
+irb(main):017:0> String.new
+=> ""
+irb(main):018:0> String.ancestors
+=> [String, Comparable, Object, Kernel, BasicObject]
+irb(main):019:0> string.try_convert("str")
+NameError: undefined local variable or method `string' for main:Object
+	from (irb):19
+	from /usr/bin/irb:12:in `<main>'
+irb(main):020:0> String.try_convert("str")
+=> "str"
+irb(main):021:0> String.try_convert(/re/)
+=> nil
+irb(main):022:0> 2**3
+=> 8
+irb(main):023:0> 2**-1
+=> (1/2)
+irb(main):024:0> 2**0.5
+=> 1.4142135623730951
+irb(main):025:0> String.extend test
+ArgumentError: wrong number of arguments (0 for 2..3)
+	from (irb):25:in `test'
+	from (irb):25
+	from /usr/bin/irb:12:in `<main>'
+irb(main):026:0> "ceci est un test".upcase
+=> "CECI EST UN TEST"
+irb(main):027:0> "ceci est un test".freeze
+=> "ceci est un test"
+irb(main):028:0> fix_minus(VALUE x, VALUE y)
+SyntaxError: (irb):28: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+fix_minus(VALUE x, VALUE y)
+                          ^
+	from /usr/bin/irb:12:in `<main>'
+irb(main):029:0> fix_div(VALUE x, VALUE y)
+SyntaxError: (irb):29: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+fix_div(VALUE x, VALUE y)
+                        ^
+	from /usr/bin/irb:12:in `<main>'
+irb(main):030:0> 1==2
+=> false
+irb(main):031:0> 1==1.0
+=> true
+irb(main):032:0> 
