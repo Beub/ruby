@@ -1,1 +1,36 @@
-// Copy your irb shell history below !
+irb(main):001:0> my_name= "benoit"
+=> "benoit"
+irb(main):002:0> def say_hi_to(name)
+irb(main):003:1> puts "Hello Ben! Welcome to the ouagon!"
+irb(main):004:1> end
+=> nil
+irb(main):005:0> 
+irb(main):006:0* 
+irb(main):007:0* 
+irb(main):008:0* cke
+NameError: undefined local variable or method `cke' for main:Object
+	from (irb):8
+	from /usr/bin/irb:12:in `<main>'
+irb(main):009:0> say_hi_to
+ArgumentError: wrong number of arguments (0 for 1)
+	from (irb):2:in `say_hi_to'
+	from (irb):9
+	from /usr/bin/irb:12:in `<main>'
+irb(main):010:0> my_name
+=> "benoit"
+irb(main):011:0> say_hi_to(my_name)
+Hello Ben! Welcome to the ouagon!
+=> nil
+irb(main):012:0> def say_hi_to(my_name)
+irb(main):013:1> puts "Hello #{my_name}! Welcome to the ouagon!"
+irb(main):014:1> end
+=> nil
+irb(main):015:0> say_hi_to(my_name)
+Hello benoit! Welcome to the ouagon!
+=> nil
+irb(main):016:0> prenom= "Chris"
+=> "Chris"
+irb(main):017:0> say_hi_to(prenom)
+Hello Chris! Welcome to the ouagon!
+=> nil
+irb(main):018:0> 
