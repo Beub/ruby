@@ -1,4 +1,4 @@
-def shuffle_word(a_word)
+	def shuffle_word(a_word)
   # Ruby fonction to play to "Des chiffres et des lettres.."
   
   cap_word = a_word.upcase
@@ -6,7 +6,7 @@ def shuffle_word(a_word)
   array = chars_enum.to_a
   shuffle_array = array.shuffle
   
-  return shuffle_array
+  return shuffle_array = a_word.upcase.chars.to_a.shuffle
   
 end
 

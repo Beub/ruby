@@ -1,12 +1,21 @@
-# your code goes here, introduce yourself !
-puts "Whats is your first name?"
+
+def welcome 
+
+	result = []
+
+	puts "What's your first name?"
 	first_name = gets.chomp
 
-puts "Whats is your middle name?"
-	middle_name = gets.chomp
+	puts "What's your second name?"
+	second_name = gets.chomp
 
-puts "Whats is your last name?"
-	Nom_de_famille = gets.chomp
+	result << first_name
+	result << second_name
 
-puts "Hello, #{first_name} #{middle_name} #{Nom_de_famille}"
-puts "Hello" + first_name + middle_name + Nom_de_famille
+	return result
+
+end 
+
+first_second_name = welcome
+puts "Hello #{first_second_name[0] + " " + first_second_name[1]}"
+
